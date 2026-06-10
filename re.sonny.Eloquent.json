@@ -18,7 +18,7 @@
       "name": "fasttext",
       "buildsystem": "simple",
       "build-commands": [
-        "make",
+        "make CXXFLAGS='-pthread -std=c++17 -O3 -funroll-loops -DNDEBUG'",
         "mkdir /app/fastText",
         "cp fasttext *.o /app/fastText"
       ],
